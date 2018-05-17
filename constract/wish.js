@@ -74,7 +74,7 @@ WishWall.prototype = {
 
     // 匿名的合约不加入到公共墙面，只有用户自己才能看到
     if (anonymous === '0') {
-        this._pushWishes('wish', item);
+        this._pushWishes('all', item);
         this._pushWishes(type,item);
     }
     this._pushWishes(from,item);
@@ -86,7 +86,7 @@ WishWall.prototype = {
     // 分页查询
     limit = parseInt(limit);
     offset = parseInt(offset);
-    var wishes = this.wishMap.get("wish");
+    var wishes = this.wishMap.get("all");
     var result = [];
     if (!wishes) {
         return result;
@@ -147,5 +147,15 @@ WishWall.prototype = {
     }
     return result;
   },
+  getWishesCount: function(type) {
+    if (type === "my") {
+      type = Blockchain.transaction.from;
+    }
+    var wishes = this.wishMap.get(type);
+    if (!wishes) {
+      return 0;
+    } 
+    return wishes.length;
+  }
 };
 module.exports = WishWall;
