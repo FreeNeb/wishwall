@@ -114,19 +114,18 @@
 		cursor: pointer;
 	}
 	.left{
+		display: -webkit-box;
 		position: absolute;
-		right: 15%;
+		right: 0%;
 		top: 10px;
 		background-color: #8c84d6;
 	}
 	.address{
-		position: absolute;
-		right: 0%;
 		top: 15px;
 		font-family:cursive; 
 		font-size: 9px;
 		margin-right: 13px;
-		color:darkorange;
+		color: #2f08e0;
 	}
 	.left-bar {
 		position: fixed;
@@ -173,8 +172,10 @@
 		<span id='lifeWall' class='tab' onclick="onLifeWallClick()">生活墙</span>
 		<span id='pegasuseWall' class='tab' onclick="onPegasuseWallClick()">天马行空墙</span>
 		<span id='myWall' class='tab' onclick="onMyWallClick()">我的许愿</span>
-		<span id='account' class='tab left'>账户:</span>
+		<div class='tab left'>
+		<span id='account' class='tab' style='background-color: #6495ed00 !important;'>账户:</span>
 		<span id='address' class='address'></span>
+		</div>
 	</div>
 	<div class="left-bar">
 		<span class="center" onclick="onPrePageClick()">PREV<span>
