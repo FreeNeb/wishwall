@@ -38,7 +38,7 @@
 		-moz-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
 	}
 	#container p{
-		height: 80px;
+		height: 200px;
 		margin: 3px 10px;
 		overflow: hidden;
 		word-wrap: break-word;
@@ -102,17 +102,21 @@
 		font-size: 27px;
 		margin-left: 30px;
 		padding-right: 40px;
+		cursor: pointer;
 	}
 	.tab {
 		font-family:cursive; 
 		font-size: 18px;
 		margin-right: 13px;
 		color: blue;
+		background-color:yellowgreen;
+		cursor: pointer;
 	}
 	.left{
 		position: absolute;
-		right: 16%;
+		right: 15%;
 		top: 10px;
+		background-color: #8c84d6;
 	}
 	.address{
 		position: absolute;
@@ -153,6 +157,7 @@
 		left: 5%;
 		top: 50%;
 		margin-top: -11px;
+		cursor: pointer;
 	}
   </style> 
   <script src="jquery-3.1.1.min.js"></script>
@@ -161,7 +166,7 @@
  </head> 
  <body> 
 	<div class="header">
-		<a class='logo'>星空许愿墙</a>
+		<a class='logo' onclick="onLogoClick()">星空许愿墙</a>
 		<span id='emotionWall' class='tab' onclick="onEmotionWallClick()">情感墙</span>
 		<span id='careerWall' class='tab' onclick="onCareerWallClick()" >事业墙</span>
 		<span id='lifeWall' class='tab' onclick="onLifeWallClick()">生活墙</span>
@@ -181,10 +186,10 @@
   </div> 
   <div id="deploy" class="hide">
 	<div class="containeritem">
-	  	<p class="label">用户昵称:</p><input id="name" type="text" style="display:inherit;width:75%;height:30px;" placeholder="请输入昵称..."></input>
+	  	<p class="label">昵称:</p><input id="name" type="text" style="display:inherit;width:75%;height:30px;" placeholder="请输入昵称..."></input>
 	</div>
 	<div class="containeritem">
-		 <p class="label">许愿类别:</p>
+		 <p class="label">类型:</p>
 		<select style="display:inherit;width:75%;height:30px;" id="type">
 			<option value="0">情感</option>
 			<option value="1">事业</option>
