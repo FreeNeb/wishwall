@@ -3,6 +3,7 @@
  <head> 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
   <title>星空许愿-基于Nebulas区块链的许愿墙</title> 
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
   <style>
 	*{
 		margin: 0px;
@@ -104,6 +105,7 @@
 		margin-left: 30px;
 		padding-right: 40px;
 		cursor: pointer;
+		color: blue;
 	}
 	.tab {
 		font-family:cursive; 
@@ -161,6 +163,7 @@
 	}
   </style> 
   <script src="jquery-3.1.1.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   <script src=lib/nebPay.js></script>
   <script src=lib/nebulas.js></script>
  </head> 
@@ -216,6 +219,16 @@
 	</div>
   </div>
   <input id="input" type="button" value="许个愿吧" />  
+  
+  <div class="modal fade" id="loadingModal">
+	<div style="width: 200px;height:20px; z-index: 20000; position: absolute; text-align: center; left: 50%; top: 50%;margin-left:-100px;margin-top:-10px">
+		<div class="progress progress-striped active" style="margin-bottom: 0;">
+			<div class="progress-bar" style="width: 100%;"></div>
+		</div>
+		<h5 style="color: aquamarine">正在加载许愿数据...</h5>
+	</div>
+</div>
+</div>
  </body>
  <script src=lib/operation.js></script>
 </html>
